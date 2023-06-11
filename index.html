@@ -52,10 +52,15 @@
         </ul>
         <div class="row">
           <div class="col-6">
-            <div class="clearfix">
+            <div class="clearfix weather-temperature">
+              <img src="" alt="Clear" id="icon" class="float-left" />
               <div class="float-left">
                 <span class="temperature" id="temperature"></span>
-                <span class="units">&degC</span>
+                <span class="units">
+                  <a href="#" id="celsius-link"> &degC </a>
+                  "|"
+                  <a href="#" id="fahrenheit-link"> &degF </a>
+                </span>
               </div>
             </div>
           </div>
@@ -76,11 +81,11 @@
         </div>
       </div>
       <small>
-      <a href="https://github.com/AnissaHec/my-weather-app" target="blank">
-        Coded
-      </a>
-      by Anissa Hector
-    </small>
+        <a href="https://github.com/AnissaHec/my-weather-app" target="blank">
+          Coded
+        </a>
+        by Anissa Hector
+      </small>
     </div>
     <script src="script.js"></script>
     <script
