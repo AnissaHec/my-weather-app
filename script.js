@@ -100,5 +100,10 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+let form = document.getElementById("#search-form");
+form.addEventListener("submit", handleSubmit);
+
 let currentButton = document.querySelector("#current-location-button");
 currentButton.addEventListener("click", getCurrentLocation);
+
+searchCity("Dallas");
