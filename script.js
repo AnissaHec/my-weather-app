@@ -41,6 +41,8 @@ function displayTemp(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -97,9 +99,6 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
 
 let currentButton = document.querySelector("#current-location-button");
 currentButton.addEventListener("click", getCurrentLocation);
