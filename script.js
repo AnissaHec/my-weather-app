@@ -42,7 +42,7 @@ function displayTemp(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  celsiusTemperature = response.data.main.temp;
+  let celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -105,5 +105,3 @@ form.addEventListener("submit", handleSubmit);
 
 let currentButton = document.querySelector("#current-location-button");
 currentButton.addEventListener("click", getCurrentLocation);
-
-searchCity();
